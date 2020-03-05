@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet"href="../mystyle.css">
+</head>
+<body>
+
+    <h1>Postal Rate Calculator</h1>
+
+    <form action="./home" method="POST">
+        <div class="form-group">
+        <!-- weight  -->
+        <label for="weight">Enter the weight of your package</label>
+        <input type="number" step="any" id="weight" name="weight" class="form-control">
+
+        <br><br>
+
+        <!-- type of mail -->
+        <label for="type">Select your mail type</label>
+        <select name="type" id="type" class="form-control">
+            <option value="">Select</option>
+            <option value="LTS">Letters (Stamped)</option>
+            <option value="LTM">Letters (Metered)</option>
+            <option value="LEF">Larger Envelops (Flats)</option>
+            <option value="FCP">First-Class Package Service - Retail</option>
+        </select>
+        <br><br>
+        <button type="submit"> Calculate the rate</button>
+    </div>
+    </form>
+
+    <p id="results"><%=data%></p>
+    
+</body>
+</html>
